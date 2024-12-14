@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: #4CAF50; /* Green - Medical color for navbar */
+    color: white;
+    padding: 10px 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Hero Section - Title Background */
+.hero {
+    background: #0288D1; /* Blue - Trust and calm medical color */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 5px solid #4CAF50; /* Green divider for separation */
+}
+
+/* Typing effect for hero title */
+.hero-title {
+    font-size: 2.5em;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.hero-text {
+    font-size: 1.2em;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3.5s steps(40) 2s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing Effect Keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Sections */
+.section {
+    padding: 50px 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(20) 0.5s forwards, blink 0.75s step-end infinite;
+}
+
+.bg-light {
+    background: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background: #ddd;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Fade-in effect for sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
