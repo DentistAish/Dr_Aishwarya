@@ -85,9 +85,6 @@ header {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Ensures text is clipped */
-    text-overflow: ellipsis;
 }
 
 /* Image Row for Multiple Oval Images */
@@ -191,3 +188,22 @@ header {
     margin: 0;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .image-row {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        width: 150px;
+        height: 150px;
+    }
+}
