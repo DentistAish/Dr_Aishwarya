@@ -1,24 +1,12 @@
-// Random Earthy Color Generator for the Circle Border
-function getRandomEarthyColor() {
-    const earthyColors = [
-        "#8e4400", // Brown
-        "#d4a200", // Mustard
-        "#ffbc00", // Yellow
-        "#ee5e00", // Orange
-        "#4e7c7b", // Greenish
-        "#5A4E43", // Dark Brown
-        "#f3b447", // Light Gold
-        "#7c5d3b"  // Sandy Brown
-    ];
+// JavaScript to handle hover effect on the images (to randomize circle border color)
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.hero-img');
+    const colors = ['#D32F2F', '#388E3C', '#0288D1', '#7B1FA2', '#FBC02D', '#1976D2'];
 
-    const randomIndex = Math.floor(Math.random() * earthyColors.length);
-    return earthyColors[randomIndex];
-}
-
-// Apply random colors to images' borders on hover
-document.querySelectorAll('.hero-img').forEach(img => {
-    img.addEventListener('mouseenter', () => {
-        const randomColor = getRandomEarthyColor();
-        img.style.setProperty('--hover-border-color', randomColor); // Custom property for hover effect
+    images.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            img.style.setProperty('--hover-border-color', randomColor);
+        });
     });
 });
