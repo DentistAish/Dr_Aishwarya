@@ -12,6 +12,10 @@ body {
     background: #4CAF50; /* Green - Medical color for navbar */
     color: white;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar */
@@ -56,11 +60,25 @@ body {
 
 /* Hero Section - Title Background */
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: #0288D1; /* Blue - Trust and calm medical color */
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 50px 20px;
     border-top: 5px solid #4CAF50; /* Green divider for separation */
+    flex-wrap: wrap;
+}
+
+.hero img {
+    max-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+    max-width: 55%;
 }
 
 /* Typing effect for hero title */
@@ -162,5 +180,35 @@ body {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px 10px;
     }
 }
