@@ -25,12 +25,12 @@
     </header>
 
     <section class="hero">
-        <div class="container hero-content">
+        <div class="container hero-content" style="animation: fadeInUp 1.5s ease-in-out; background: linear-gradient(to right, #e3f2fd, #bbdefb); border-radius: 10px; padding: 30px;">
             <div>
-                <h2 class="hero-title">Attending Consultant | Endodontist</h2>
-                <p class="hero-text">Dedicated to providing the best dental care with expertise and compassion.</p>
+                <h2 class="hero-title" style="color: #0288D1; animation: fadeInText 1.5s ease-in-out;">Attending Consultant | Endodontist</h2>
+                <p class="hero-text" style="color: #4CAF50; animation: fadeInText 2s ease-in-out;">Dedicated to providing the best dental care with expertise and compassion.</p>
             </div>
-            <img src="Image_1.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
+            <img src="profile-photo.jpg" alt="Dr. Aishwarya Arya" class="hero-img" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
         </div>
     </section>
 
@@ -73,11 +73,11 @@
     <section id="contact" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com">dr.aishwaryaendo@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+919902970574"></a></p>
+            <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com" class="link">dr.aishwaryaendo@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919902970574" class="link">+91 9902970574</a></p>
             <div class="buttons">
-                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button">Book a Slot</a>
-                <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button">Instagram</a>
+                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button link">Book a Slot</a>
+                <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button link">Instagram</a>
             </div>
         </div>
     </section>
@@ -87,6 +87,39 @@
             <p>© 2024 Dr. Aishwarya Arya. All rights reserved.</p>
         </div>
     </footer>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .link {
+            text-decoration: none;
+            color: #0288D1;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .link:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+    </style>
 </body>
 
 </html>
