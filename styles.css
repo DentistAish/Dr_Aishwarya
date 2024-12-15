@@ -142,9 +142,9 @@ header {
     transition: border-color 0.3s ease;
 }
 
-/* Add Hover Color Randomization */
+/* Hover effect for color randomization */
 .hero-img:hover::before {
-    border-color: #ffbc00;
+    border-color: var(--hover-border-color);
 }
 
 /* Section Styles */
