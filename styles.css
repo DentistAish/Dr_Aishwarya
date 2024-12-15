@@ -21,19 +21,19 @@ a {
 /* Header and Navbar Styles */
 header {
     background: #fff;
-    padding: 40px 0; /* Added padding for spacing */
+    padding: 40px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;  /* Center align the whole header */
+    text-align: center;
 }
 
 .navbar {
-    margin-top: 20px;  /* Add some space between the title and navbar */
+    margin-top: 20px;
 }
 
 .navbar .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center;
     gap: 30px;
     margin: 0;
 }
@@ -54,8 +54,8 @@ header {
 .logo {
     font-size: 36px;
     font-weight: 600;
-    color: #5A4E43; /* Earthy color */
-    margin-bottom: 10px;  /* Space below the title */
+    color: #5A4E43;
+    margin-bottom: 10px;
 }
 
 /* Hero Section */
@@ -85,6 +85,9 @@ header {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures text is clipped */
+    text-overflow: ellipsis;
 }
 
 /* Image Row for Multiple Oval Images */
@@ -96,7 +99,7 @@ header {
 }
 
 .hero-img {
-    width: 180px; /* Larger images */
+    width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -115,7 +118,7 @@ header {
 }
 
 .hero-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.15); /* Slightly enlarge the image */
 }
 
 .hero-img::before {
@@ -151,21 +154,10 @@ header {
     font-weight: 600;
     color: #333;
     margin-bottom: 30px;
-    text-align: left;
+    text-align: center;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-    font-size: 16px;
-}
-
-ul li {
-    line-height: 1.8;
-    font-weight: 400;
-}
-
-/* Contact Section Buttons */
+/* Buttons Styles */
 .buttons {
     display: flex;
     justify-content: center;
@@ -198,3 +190,4 @@ ul li {
 .footer p {
     margin: 0;
 }
+
