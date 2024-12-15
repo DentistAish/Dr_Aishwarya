@@ -125,7 +125,7 @@ header {
     font-weight: 600;
     color: #333;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left; /* Left align the section titles */
 }
 
 ul {
@@ -165,4 +165,8 @@ ul li {
 
 /* Footer */
 .footer {
-    background-color: #5A4E43; /* Dark earthy
+    background-color: #5A4E43; /* Dark earthy color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
