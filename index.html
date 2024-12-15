@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for professional fonts (Roboto for body, Merriweather for headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Aishwarya Arya - Dentistry</title>
@@ -25,10 +26,10 @@
     </header>
 
     <section class="hero">
-        <div class="container hero-content" style="animation: fadeInUp 1.5s ease-in-out; background: linear-gradient(to right, #e3f2fd, #bbdefb); border-radius: 10px; padding: 30px;">
+        <div class="container hero-content fade-in-up" style="background: linear-gradient(to right, #e3f2fd, #bbdefb); border-radius: 10px; padding: 30px;">
             <div>
-                <h2 class="hero-title" style="color: #0288D1; animation: fadeInText 1.5s ease-in-out;">Attending Consultant | Endodontist</h2>
-                <p class="hero-text" style="color: #4CAF50; animation: fadeInText 2s ease-in-out;">Dedicated to providing the best dental care with expertise and compassion.</p>
+                <h2 class="hero-title fade-in-text" style="color: #0288D1;">Attending Consultant | Endodontist</h2>
+                <p class="hero-text fade-in-text" style="color: #4CAF50;">Dedicated to providing the best dental care with expertise and compassion.</p>
             </div>
             <img src="Image_1.jpeg" alt="Dr. Aishwarya Arya" class="hero-img" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
         </div>
@@ -88,38 +89,14 @@
         </div>
     </footer>
 
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInText {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .link {
-            text-decoration: none;
-            color: #0288D1;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .link:hover {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-    </style>
+    <script>
+        // Animation classes for fade-in effects
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.hero-title').classList.add('fade-in-text');
+            document.querySelector('.hero-text').classList.add('fade-in-text');
+            document.querySelector('.hero').classList.add('fade-in-up');
+        });
+    </script>
 </body>
 
 </html>
