@@ -27,9 +27,17 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: center;  /* Centers the navbar */
     align-items: center;
     padding: 0 20px;
+    width: 100%; /* Ensure navbar spans the entire width */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -37,12 +45,14 @@ header {
     font-weight: 600;
     color: #5A4E43; /* Earthy color */
     margin-right: 50px;
+    text-align: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 40px;
+    margin: 0;  /* Remove any margin */
 }
 
 .nav-links li a {
