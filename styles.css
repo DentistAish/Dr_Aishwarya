@@ -1,214 +1,133 @@
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* Header */
-.header {
-    background: #4CAF50; /* Green - Medical color for navbar */
-    color: white;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Aishwarya Arya - Dentistry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Dr. Aishwarya Arya</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 500;
-    text-align: center;
-}
+    <section class="hero">
+        <div class="container hero-content fade-in-up">
+            <div>
+                <h2 class="hero-title fade-in-text" style="color: #0288D1;">Attending Consultant | Endodontist</h2>
+                <p class="hero-text fade-in-text" style="color: #4CAF50;">Dedicated to providing the best dental care with expertise and compassion.</p>
+            </div>
+            <img src="profile-photo.jpg" alt="Dr. Aishwarya Arya" class="hero-img" style="box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+    </section>
 
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I completed my BDS in 2019 from the College of Dental Sciences, Davangere, Karnataka, and my MDS in 2023 from MM College of Dental Sciences & Research, Mullana, Haryana, specializing in Conservative Dentistry & Endodontics.
+            </p>
+            <p>
+                Currently, I am an Attending Consultant at Medanta, Gurugram. As a motivated and confident professional with excellent communication skills, I am always prepared to adapt and excel in any environment. With a strong foundation in healthcare, I have a proven track record of successfully diagnosing and treating various dental conditions. My expertise includes root canals, restorations, esthetics and smile designing, crown preparation, and tooth bleaching.
+            </p>
+        </div>
+    </section>
 
-.nav-links li {
-    margin-left: 30px;
-}
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <ul>
+                <li><strong>BDS:</strong> College of Dental Sciences, Davangere, Karnataka</li>
+                <li><strong>MDS:</strong> MM College of Dental Sciences, Mullana, Haryana</li>
+            </ul>
+        </div>
+    </section>
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Clinical Skills</h2>
+            <ul>
+                <li>Root Canal Procedures</li>
+                <li>Esthetic and Cosmetic Dentistry</li>
+                <li>Surgical Endodontics - Apicoectomy</li>
+                <li>Extractions</li>
+                <li>Crown Preparations (Pfm-Zirconia-Emax)</li>
+                <li>Tooth Bleaching</li>
+            </ul>
+        </div>
+    </section>
 
-.nav-links a:hover {
-    color: #45a049;
-    transform: scale(1.1);
-}
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com" class="link">dr.aishwaryaendo@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919902970574" class="link">+91 9902970574</a></p>
+            <div class="buttons">
+                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button link">Book a Slot</a>
+                <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button link">Instagram</a>
+            </div>
+        </div>
+    </section>
 
-/* Hero Section - Title Background */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0288D1; /* Blue - Trust and calm medical color */
-    color: white;
-    text-align: left;
-    padding: 50px 20px;
-    border-top: 5px solid #4CAF50; /* Green divider for separation */
-    flex-wrap: wrap;
-}
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Dr. Aishwarya Arya. All rights reserved.</p>
+        </div>
+    </footer>
 
-.hero img {
-    max-width: 40%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.hero-content {
-    max-width: 55%;
-}
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-/* Typing effect for hero title */
-.hero-title {
-    font-size: 2.5em;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-}
+        .fade-in-up {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
 
-.hero-text {
-    font-size: 1.2em;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 3.5s steps(40) 2s forwards, blink 0.75s step-end infinite;
-}
+        .fade-in-text {
+            animation: fadeInText 1.5s ease-in-out;
+        }
 
-/* Typing Effect Keyframes */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
+        .link {
+            text-decoration: none;
+            color: #0288D1;
+            transition: color 0.3s ease-in-out;
+        }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
+        .link:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+    </style>
+</body>
 
-/* Sections */
-.section {
-    padding: 50px 20px;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.section-title {
-    font-size: 2em;
-    color: #4CAF50;
-    margin-bottom: 20px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 2s steps(20) 0.5s forwards, blink 0.75s step-end infinite;
-}
-
-.bg-light {
-    background: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Buttons */
-.buttons {
-    margin-top: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 1em;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.button:hover {
-    background: #45a049;
-    transform: translateY(-3px);
-}
-
-/* Footer */
-.footer {
-    background: #ddd;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-/* Fade-in effect for sections */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img {
-        max-width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 30px 10px;
-    }
-}
+</html>
