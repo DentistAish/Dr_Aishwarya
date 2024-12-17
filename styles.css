@@ -120,6 +120,7 @@ header {
 }
 
 .hero-img::before {
+    border-color: #0288D1; 
     content: '';
     position: absolute;
     top: -10px;
