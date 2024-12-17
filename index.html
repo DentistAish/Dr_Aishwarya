@@ -23,16 +23,25 @@
             position: absolute;
             width: 300%;
             height: 100%;
-            background: linear-gradient(to right, transparent 0%, #4CAF50 10%, transparent 20%, transparent 80%, #4CAF50 90%, transparent 100%);
-            animation: ecg-animation 3s linear infinite;
+            background: linear-gradient(to right, transparent 0%, #4CAF50 5%, transparent 15%, transparent 35%, #4CAF50 45%, transparent 55%, transparent 75%, #4CAF50 85%, transparent 100%);
+            animation: ecg-animation 5s linear infinite;
         }
 
         @keyframes ecg-animation {
             0% {
                 transform: translateX(-100%);
             }
-            100% {
+            25% {
+                transform: translateX(0%);
+            }
+            50% {
                 transform: translateX(100%);
+            }
+            75% {
+                transform: translateX(200%);
+            }
+            100% {
+                transform: translateX(300%);
             }
         }
     </style>
@@ -140,7 +149,7 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com" class="link">dr.aishwaryaendo@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+919902970574" class="link">+91 9902970574</a></p>
+            <p><strong>Phone:</strong> <a href="tel:" class="link">+91 </a></p>
             <div class="buttons">
                 <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button link">Book a Slot</a>
                 <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button link">Instagram</a>
