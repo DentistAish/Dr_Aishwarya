@@ -115,28 +115,26 @@ header {
     }
 }
 
-.hero-img:hover {
-    transform: scale(1.15); /* Slightly enlarge the image */
-}
-
 .hero-img::before {
-    border-color: #0288D1; 
-    content: '';
+    content: ''; /* Ensures pseudo-element renders */
     position: absolute;
     top: -10px;
     left: -10px;
     right: -10px;
     bottom: -10px;
-    border: 4px solid;
+    border: 4px solid #0288D1; /* Default border color */
     border-radius: 50%;
-    animation: rotateCircle 1.5s linear infinite;
-    z-index: -1; /* Ensure the circle is behind the image */
-    transition: border-color 0.3s ease;
+    animation: rotateCircle 1.5s linear infinite; /* Rotate animation */
+    z-index: -1; /* Behind the image */
+    transition: border-color 0.3s ease; /* Smooth border color change */
 }
 
-/* Hover effect for color randomization */
+.hero-img:hover {
+    transform: scale(1.15); /* Slightly enlarge the image */
+}
+
 .hero-img:hover::before {
-    border-color: var(--hover-border-color);
+    border-color: var(--hover-border-color); /* Optional hover effect for dynamic color */
 }
 
 /* Section Styles */
