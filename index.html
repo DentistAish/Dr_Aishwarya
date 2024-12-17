@@ -7,6 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Aishwarya Arya - Dentistry</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ECG-like Green Line Animation */
+        .ecg-line {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            overflow: hidden;
+            margin: 10px 0 30px;
+        }
+
+        .ecg-line::after {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 100%;
+            background: linear-gradient(to right, transparent 0%, #4CAF50 10%, transparent 20%, transparent 80%, #4CAF50 90%, transparent 100%);
+            animation: ecg-animation 3s linear infinite;
+        }
+
+        @keyframes ecg-animation {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +43,7 @@
         <div class="container">
             <!-- Centered Title -->
             <h1 class="logo">Dr. Aishwarya Arya</h1>
-
+            <div class="ecg-line"></div>
             <!-- Centered Navbar -->
             <nav class="navbar">
                 <ul class="nav-links">
