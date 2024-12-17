@@ -29,19 +29,47 @@
 
         @keyframes ecg-animation {
             0% {
-                transform: translateX(-100%);
+                transform: translateX(-100%) scaleY(0);
             }
-            25% {
-                transform: translateX(0%);
+
+            10% {
+                transform: translateX(10%) scaleY(1.2);
             }
+
+            20% {
+                transform: translateX(20%) scaleY(0.6);
+            }
+
+            30% {
+                transform: translateX(30%) scaleY(1.4);
+            }
+
+            40% {
+                transform: translateX(40%) scaleY(1);
+            }
+
             50% {
-                transform: translateX(100%);
+                transform: translateX(50%) scaleY(0.6);
             }
-            75% {
-                transform: translateX(200%);
+
+            60% {
+                transform: translateX(60%) scaleY(1.5);
             }
+
+            70% {
+                transform: translateX(70%) scaleY(0.7);
+            }
+
+            80% {
+                transform: translateX(80%) scaleY(1.3);
+            }
+
+            90% {
+                transform: translateX(90%) scaleY(0.8);
+            }
+
             100% {
-                transform: translateX(300%);
+                transform: translateX(100%) scaleY(1);
             }
         }
     </style>
