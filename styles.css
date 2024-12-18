@@ -129,6 +129,7 @@ header {
     z-index: -1;
     transition: border-color 0.3s ease;
     background-color: white; /* Added background color */
+    class: border-circle; /* Added class */
 }
 
 .hero-img:hover {
