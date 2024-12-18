@@ -7,81 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Aishwarya Arya - Dentistry</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* ECG-like Green Line Animation */
-        .ecg-line {
-            position: relative;
-            width: 100%;
-            height: 4px;
-            background-color: transparent;
-            overflow: hidden;
-            margin: 10px 0 30px;
-        }
-
-        .ecg-line::after {
-            content: '';
-            position: absolute;
-            width: 300%;
-            height: 100%;
-            background: linear-gradient(to right, transparent 0%, #4CAF50 5%, transparent 15%, transparent 35%, #4CAF50 45%, transparent 55%, transparent 75%, #4CAF50 85%, transparent 100%);
-            animation: ecg-animation 15s linear infinite;
-        }
-
-        @keyframes ecg-animation {
-            0% {
-                transform: translateX(-100%) scaleY(0);
-            }
-
-            10% {
-                transform: translateX(10%) scaleY(1.2);
-            }
-
-            20% {
-                transform: translateX(20%) scaleY(0.6);
-            }
-
-            30% {
-                transform: translateX(30%) scaleY(1.4);
-            }
-
-            40% {
-                transform: translateX(40%) scaleY(1);
-            }
-
-            50% {
-                transform: translateX(50%) scaleY(0.6);
-            }
-
-            60% {
-                transform: translateX(60%) scaleY(1.5);
-            }
-
-            70% {
-                transform: translateX(70%) scaleY(0.7);
-            }
-
-            80% {
-                transform: translateX(80%) scaleY(1.3);
-            }
-
-            90% {
-                transform: translateX(90%) scaleY(0.8);
-            }
-
-            100% {
-                transform: translateX(100%) scaleY(1);
-            }
-        }
-    </style>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <!-- Centered Title -->
             <h1 class="logo">Dr. Aishwarya Arya</h1>
             <div class="ecg-line"></div>
-            <!-- Centered Navbar -->
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -117,79 +49,7 @@
         </div>
     </section>
 
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <ul>
-                <li><strong>BDS:</strong> College of Dental Sciences, Davangere, Karnataka</li>
-                <li><strong>MDS:</strong> MM College of Dental Sciences, Mullana, Haryana</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Clinical Skills</h2>
-            <ul>
-                <li>Root Canal Procedures</li>
-                <li>Esthetic and Cosmetic Dentistry</li>
-                <li>Surgical Endodontics - Apicoectomy</li>
-                <li>Extractions</li>
-                <li>Crown Preparations (Pfm-Zirconia-Emax)</li>
-                <li>Tooth Bleaching</li>
-                <li>Reattachment of Fractured Tooth</li>
-                <li>Post and Core Treatments</li>
-                <li>Management of Endo-Perio Problems</li>
-                <li>Endodontic Surgeries</li>
-                <li>Vital and Non-Vital Bleaching</li>
-                <li>Restorative Dentistry (Composite, GIC, Amalgam)</li>
-                <li>Pulpotomies and Pulpectomies</li>
-                <li>Cosmetic Dentistry Procedures</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="awards" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Awards</h2>
-            <ul>
-                <li><strong>Best Poster Award:</strong> World Dental Conference 2020 - Cryotherapy in Endodontics</li>
-                <li><strong>Best Paper Award:</strong> Evaluation of crack propagation in root dentin (AIIMS Delhi, IES Conference, 2022)</li>
-                <li><strong>Honors:</strong> 6th Position in Periodontics (Rajiv Gandhi University of Health Sciences)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <ul>
-                <li>An In-vitro Study Comparing Fracture Resistance of Endodontically Treated Teeth (<a href="#">International Journal of Applied Dental Sciences, 2024</a>)</li>
-                <li>Comparative Analysis of Coronal Tooth Discoloration in Regenerative Endodontics (<a href="#">CUREUS PubMed, 2024</a>)</li>
-                <li>Comparative Evaluation of Anti-Fog Agents on Mouth Mirrors (<a href="#">IJMSCR, 2023</a>)</li>
-                <li>Evaluation of Apical Sealing Ability of Obturating Materials (<a href="#">Journal of Chemical Health Risks, 2024</a>)</li>
-                <li>Phytoendodontics: A Novel Vista in Endodontics (<a href="#">Journal of Chemical Health Risks, 2024</a>)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com" class="link">dr.aishwaryaendo@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:" class="link">+91 </a></p>
-            <div class="buttons">
-                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button link">Book a Slot</a>
-                <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button link">Instagram</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Dr. Aishwarya Arya. All rights reserved.</p>
-        </div>
-    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
