@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     images.forEach(img => {
         img.addEventListener('mouseenter', function() {
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            const beforeElement = img.querySelector('.border-circle');
-            if (beforeElement) {
-                beforeElement.style.borderColor = randomColor;
-            }
+            img.style.setProperty('--hover-border-color', randomColor);
+            img.classList.add('active-border');
+        });
+
+        img.addEventListener('mouseleave', function() {
+            img.classList.remove('active-border');
         });
     });
 });
