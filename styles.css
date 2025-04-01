@@ -1,58 +1,378 @@
-.hero-img {
-    /* --- Make sure these are equal for a circle --- */
-    width: 200px;  /* Or your desired size */
-    height: 200px; /* MUST BE THE SAME AS WIDTH */
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #444;
+}
 
-    /* --- This is the crucial line for the circular shape --- */
-    border-radius: 50%;
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    /* --- This helps the image fill the circle nicely --- */
-    object-fit: cover;
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
 
-    /* --- Keep other styles like border, box-shadow, position, overflow, transition --- */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    border: 3px solid transparent; /* Base border for transitions */
+/* Header and Navbar Styles */
+header {
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0; /* Added margin: 0 here */
+    padding: 0; /* Added padding: 0 here */
+}
+
+.nav-links li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #0288D1;
+    transform: translateY(-2px);
+}
+
+/* Logo (Title) Styling */
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    color: #5A4E43;
+    margin-bottom: 10px;
+}
+
+/* ECG Line (Improved) */
+.ecg-line {
     position: relative;
-    overflow: visible;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
-    /* --- Remove any other border-radius property that might conflict --- */
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 10px 0 30px;
 }
 
-/* Keep the :hover styles and ::after styles as they were */
+.ecg-line::after {
+    content: '';
+    position: absolute;
+    width: 400%; /* Width adjusted */
+    height: 100%; /* Height adjusted */
+    background: linear-gradient(to right,
+        transparent 0%,
+        #4CAF50 1%, transparent 3%, transparent 6%, #4CAF50 8%, transparent 10%,
+        transparent 13%, #4CAF50 15%, transparent 18%, transparent 21%, #4CAF50 23%,
+        transparent 26%, transparent 29%, #4CAF50 31%, transparent 34%, transparent 37%,
+        #4CAF50 39%, transparent 42%, transparent 45%, #4CAF50 47%, transparent 50%,
+        transparent 53%, #4CAF50 55%, transparent 58%, transparent 61%, #4CAF50 63%,
+        transparent 66%, transparent 69%, #4CAF50 71%, transparent 74%, transparent 77%,
+        #4CAF50 79%, transparent 82%, transparent 85%, #4CAF50 87%, transparent 90%,
+        transparent 93%, #4CAF50 95%, transparent 100%);
+    /* Removed the specific animation from here, added below for clarity */
+    /* Ensure this animation is defined if not already */
+    animation: ecg-animation 7s linear infinite;
+}
+
+
+/* Ensure ECG Keyframes are defined */
+@keyframes ecg-animation {
+    0% { transform: translateX(-75%); /* Start further left */ }
+    100% { transform: translateX(0%); /* End at original position before repeating */ }
+    /* Removed complex scale changes for potential simplification, add back if needed */
+}
+
+
+/* Hero Section */
+.hero {
+    background-color: #f7f9fc;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #0288D1;
+    margin-bottom: 0.5em; /* Adjusted margin */
+}
+
+.hero-text {
+    font-size: 22px;
+    font-weight: 400;
+    color: #4CAF50;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* Adjusted margin */
+    line-height: 1.6;
+}
+
+/* Image Row for Multiple Oval Images */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* --- Hero Image Styling --- */
+.hero-img {
+    width: 180px;  /* Keep width */
+    height: 180px; /* Keep height - MUST be same as width for circle */
+    border-radius: 50%; /* Keep border-radius for circular image */
+    object-fit: cover; /* Keep object-fit */
+    position: relative; /* Keep position relative */
+    transition: transform 0.3s ease; /* Keep transform transition */
+    z-index: 1; /* Keep z-index */
+    cursor: pointer; /* Optional: Add pointer cursor */
+    border: 3px solid transparent; /* Add base transparent border for smoother transitions if needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* --- Animated Circle using ::before --- */
+.hero-img::before {
+    content: '';
+    position: absolute;
+    /* Adjust positioning for desired gap */
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 4px solid transparent; /* Start transparent */
+    border-radius: 50%; /* Ensure border is circular */
+    z-index: -1; /* Place behind the image */
+    opacity: 0; /* Start hidden */
+    transition: border-color 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    pointer-events: none; /* Don't interfere with hover */
+
+    /* --- REMOVED animation from base state --- */
+    /* --- REMOVED background-color: white; --- */
+}
+
+/* --- Image Hover Effects --- */
 .hero-img:hover {
-   transform: scale(1.1);
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.15); /* Keep existing scale effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-.hero-img.active-border {
-    border-color: var(--hover-border-color, #ccc);
+/* --- Apply Circle Animation ONLY on Hover --- */
+.hero-img:hover::before {
+    opacity: 1; /* Make circle visible */
+    border-color: #0288D1; /* Set circle color on hover - CHANGE AS NEEDED */
+    animation: rotateCircle 1.5s linear infinite; /* Apply animation ONLY on hover */
 }
 
-.hero-img::after {
-  content: '';
-  position: absolute;
-  top: -7px;
-  left: -7px;
-  right: -7px;
-  bottom: -7px;
-  border: 3px solid transparent;
-  border-radius: 50%; /* Also apply here to ensure the border shape matches */
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, border-color 0.3s ease;
-  z-index: -1;
+/* --- REMOVED .hero-img.active-border::before rule --- */
+/* If you need the JS random color, re-add this and adjust the hover::before */
+
+/* --- Define the Rotation Animation --- */
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.hero-img:hover::after {
-  opacity: 1;
-  border-color: #007bff; /* Circle color */
-  animation: spin 2s linear infinite;
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
 }
 
-/* Keep the @keyframes spin rule */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Buttons Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.button {
+    padding: 12px 30px;
+    background-color: #0288D1;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.button:hover {
+    background-color: #0277BD;
+    transform: translateY(-3px);
+    color: white; /* Ensure text remains white */
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px; /* Add margin above footer */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Slightly wider container on mobile */
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    .navbar .nav-links {
+        gap: 20px; /* Reduce gap */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    .nav-links li a {
+        font-size: 16px; /* Slightly smaller nav text */
+    }
+
+    .logo {
+        font-size: 30px; /* Smaller logo */
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 36px; /* Smaller hero title */
+    }
+
+    .hero-text {
+        font-size: 18px; /* Smaller hero text */
+    }
+
+    .image-row {
+        /* Keep flex-direction: row, but allow wrapping (already set above) */
+        gap: 30px; /* Adjust gap */
+    }
+
+    .hero-img {
+        width: 150px; /* Smaller images */
+        height: 150px;
+    }
+
+    .hero-img::before {
+        /* Adjust gap for smaller images */
+        top: -6px;
+        left: -6px;
+        right: -6px;
+        bottom: -6px;
+        border-width: 3px; /* Slightly thinner border */
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 28px; /* Smaller section titles */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    .navbar .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 120px;
+        height: 120px;
+    }
+
+     .hero-img::before {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-width: 2px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+     .buttons {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .button {
+        width: 80%;
+        max-width: 280px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 }
