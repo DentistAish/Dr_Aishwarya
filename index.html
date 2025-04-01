@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Aishwarya Arya - Dentistry</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure styles.css includes the container/overlay styles -->
 </head>
 
 <body>
@@ -34,9 +34,16 @@
                 <p class="hero-text">Dedicated to providing the best dental care with expertise and compassion.</p>
             </div>
             <div class="image-row">
-                <img src="Image_1.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
-                <img src="Image_2.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
-                <img src="Image_3.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
+                <!-- Images are now wrapped in containers -->
+                <div class="hero-img-container">
+                    <img src="Image_1.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
+                </div>
+                <div class="hero-img-container">
+                    <img src="Image_2.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
+                </div>
+                <div class="hero-img-container">
+                    <img src="Image_3.jpeg" alt="Dr. Aishwarya Arya" class="hero-img">
+                </div>
             </div>
         </div>
     </section>
@@ -96,11 +103,13 @@
         <div class="container">
             <h2 class="section-title">Publications</h2>
             <ul>
-                <li>An In-vitro Study Comparing Fracture Resistance of Endodontically Treated Teeth (<a href="#">International Journal of Applied Dental Sciences, 2024</a>)</li>
-                <li>Comparative Analysis of Coronal Tooth Discoloration in Regenerative Endodontics (<a href="#">CUREUS PubMed, 2024</a>)</li>
-                <li>Comparative Evaluation of Anti-Fog Agents on Mouth Mirrors (<a href="#">IJMSCR, 2023</a>)</li>
-                <li>Evaluation of Apical Sealing Ability of Obturating Materials (<a href="#">Journal of Chemical Health Risks, 2024</a>)</li>
-                <li>Phytoendodontics: A Novel Vista in Endodontics (<a href="#">Journal of Chemical Health Risks, 2024</a>)</li>
+                <!-- Consider adding target="_blank" to open these links in a new tab -->
+                <li>An In-vitro Study Comparing Fracture Resistance of Endodontically Treated Teeth (<a href="#" target="_blank" rel="noopener noreferrer">International Journal of Applied Dental Sciences, 2024</a>)</li>
+                <li>Comparative Analysis of Coronal Tooth Discoloration in Regenerative Endodontics (<a href="#" target="_blank" rel="noopener noreferrer">CUREUS PubMed, 2024</a>)</li>
+                <li>Comparative Evaluation of Anti-Fog Agents on Mouth Mirrors (<a href="#" target="_blank" rel="noopener noreferrer">IJMSCR, 2023</a>)</li>
+                <li>Evaluation of Apical Sealing Ability of Obturating Materials (<a href="#" target="_blank" rel="noopener noreferrer">Journal of Chemical Health Risks, 2024</a>)</li>
+                <li>Phytoendodontics: A Novel Vista in Endodontics (<a href="#" target="_blank" rel="noopener noreferrer">Journal of Chemical Health Risks, 2024</a>)</li>
+                 <!-- Note: Replace '#' with actual URLs if available -->
             </ul>
         </div>
     </section>
@@ -109,10 +118,10 @@
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p><strong>Email:</strong> <a href="mailto:dr.aishwaryaendo@gmail.com" class="link">dr.aishwaryaendo@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:" class="link">+91 </a></p>
+            <p><strong>Phone:</strong> <a href="tel:" class="link">+91 XXXXXXXXXX</a></p> <!-- Add actual phone number -->
             <div class="buttons">
-                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" class="button link">Book a Slot</a>
-                <a href="https://www.instagram.com/smile.witharya/" target="_blank" class="button link">Instagram</a>
+                <a href="https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya" target="_blank" rel="noopener noreferrer" class="button link">Book a Slot</a>
+                <a href="https://www.instagram.com/smile.witharya/" target="_blank" rel="noopener noreferrer" class="button link">Instagram</a>
             </div>
         </div>
     </section>
@@ -123,7 +132,8 @@
         </div>
     </footer>
 
-    <script src="hover-effects.js"></script>
+    <!-- Note: hover-effects.js is likely not needed anymore if it only targeted the images -->
+    <!-- <script src="hover-effects.js"></script> -->
 </body>
 
 </html>
