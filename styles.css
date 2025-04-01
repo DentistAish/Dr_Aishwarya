@@ -133,74 +133,44 @@ header {
 }
 
 
-/* === START: Corrected Hero Image Block === */
+/* === START: New Hero Image Block (Round to Square) === */
 
 /* --- Hero Image Styling --- */
 .hero-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: relative; /* Needed for ::before positioning */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-    z-index: 1;
+    width: 180px;  /* Keep width */
+    height: 180px; /* Keep height - MUST be same as width for initial circle */
+    object-fit: cover; /* Keep image filling nicely */
+    position: relative;
     cursor: pointer;
-    border: 3px solid transparent; /* Optional base border if needed for layout/transitions */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: visible; /* Allow ::before to potentially show outside */
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Basic shadow */
+    overflow: hidden; /* Hide any parts outside the border-radius */
 
-/* --- Animated Circle using ::before --- */
-.hero-img::before {
-    content: '';
-    position: absolute;
-    /* Positioning for the gap */
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
+    /* --- Initial State: Perfectly Round --- */
+    border-radius: 50%;
 
-    /* --- CRITICAL: Initial State - Invisible --- */
-    border-width: 4px;                 /* Set border width */
-    border-style: solid;               /* Set border style */
-    border-color: transparent;         /* MUST be transparent initially */
-    opacity: 0;                        /* MUST be 0 initially */
-    /* --- End Critical Initial State --- */
+    /* --- Transition for Smoothness --- */
+    /* Apply transition to border-radius and other properties changing on hover */
+    transition: border-radius 0.4s ease, /* Controls shape change speed */
+                transform 0.3s ease,    /* Controls scale speed */
+                box-shadow 0.3s ease;   /* Controls shadow speed */
 
-    border-radius: 50%; /* Ensure border is circular */
-    z-index: -1;
-    pointer-events: none; /* Prevent interference */
-
-    /* --- Transition for smooth appearance/disappearance --- */
-    transition: border-color 0.3s ease, opacity 0.3s ease;
+    /* Remove any borders from previous attempts */
+    border: none;
 }
 
 /* --- Image Hover Effects --- */
 .hero-img:hover {
-    transform: scale(1.15); /* Scale effect */
+    /* --- Hover State: Square (or slightly rounded) --- */
+    border-radius: 0; /* Makes it a sharp square */
+    /* Optionally, use a small value for slightly rounded corners: */
+    /* border-radius: 15px; */
+
+    /* --- Keep Other Hover Effects (Optional) --- */
+    transform: scale(1.1); /* Keep scale effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 
-/* --- Apply Circle Color and Animation ONLY on Hover --- */
-.hero-img:hover::before {
-    /* --- CRITICAL: Hover State - Visible & Animated --- */
-    opacity: 1;                        /* Make it visible */
-    border-color: #0288D1;             /* Set the desired color */
-    animation: rotateCircle 1.5s linear infinite; /* Apply the animation */
-    /* --- End Critical Hover State --- */
-}
-
-/* --- Define the Rotation Animation --- */
-@keyframes rotateCircle {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* === END: Corrected Hero Image Block === */
+/* === END: New Hero Image Block (Round to Square) === */
 
 
 /* Section Styles */
@@ -303,14 +273,6 @@ header {
         height: 150px;
     }
 
-    .hero-img::before {
-        top: -6px;
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
-        border-width: 3px;
-    }
-
     .section {
         padding: 60px 0;
     }
@@ -352,14 +314,6 @@ header {
     .hero-img {
         width: 120px;
         height: 120px;
-    }
-
-     .hero-img::before {
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        border-width: 2px;
     }
 
     .section-title {
