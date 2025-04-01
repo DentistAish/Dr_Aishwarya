@@ -1,385 +1,58 @@
-/* --- General Reset & Base Styles --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-}
-
-body {
-    font-family: 'Roboto', sans-serif; /* Default font */
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- Typography --- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif; /* Font for headings */
-    margin-bottom: 0.8em;
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff; /* Default link color */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ul {
-    list-style: disc; /* Default list style */
-    padding-left: 25px; /* Indent list items */
-    margin-bottom: 1em;
-}
-
-li {
-    margin-bottom: 0.5em;
-}
-
-/* --- Header & Navigation --- */
-.header {
-    background-color: #ffffff; /* White header background */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Keep header at the top */
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #eee;
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: 600;
-    color: #2c3e50; /* Darker color for logo */
-    margin: 0;
-}
-
-.ecg-line {
-    /* Example: A simple line - Customize as needed */
-    height: 2px;
-    background-color: #007bff;
-    width: 50px; /* Adjust width */
-    margin: 5px auto 10px; /* Center below logo */
-    display: none; /* Hide for now, maybe use elsewhere or remove */
-}
-
-.navbar {
-    /* Styles for the navigation container */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    margin-left: 20px; /* Spacing between nav items */
-}
-
-.nav-links a {
-    font-family: 'Poppins', sans-serif;
-    color: #555;
-    font-weight: 400;
-    padding: 5px 10px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    border-bottom: 2px solid transparent; /* For hover effect */
-    text-decoration: none;
-}
-
-.nav-links a:hover,
-.nav-links a.active { /* Add 'active' class with JS if desired */
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-}
-
-/* --- Hero Section --- */
-.hero {
-    background-color: #f8f9fa; /* Light background for hero */
-    padding: 60px 0;
-    text-align: center;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column; /* Stack text and images vertically */
-    align-items: center;
-}
-
-.hero-title {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 0.3em;
-}
-
-.hero-text {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 25px; /* Spacing between images */
-    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-}
-
-/* --- Hero Image Styles & Hover Effects --- */
 .hero-img {
-    width: 200px;  /* Adjust size as needed */
-    height: 200px; /* Adjust size as needed */
-    object-fit: cover; /* Crop images nicely */
-    border-radius: 50%; /* Make images circular */
+    /* --- Make sure these are equal for a circle --- */
+    width: 200px;  /* Or your desired size */
+    height: 200px; /* MUST BE THE SAME AS WIDTH */
+
+    /* --- This is the crucial line for the circular shape --- */
+    border-radius: 50%;
+
+    /* --- This helps the image fill the circle nicely --- */
+    object-fit: cover;
+
+    /* --- Keep other styles like border, box-shadow, position, overflow, transition --- */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    border: 3px solid transparent; /* Base border for smooth transition with JS effect */
-
-    /* Positioning context for the ::after pseudo-element */
+    border: 3px solid transparent; /* Base border for transitions */
     position: relative;
-    overflow: visible; /* Ensure the circle isn't clipped */
-
-    /* Transitions for smoothness (zoom, border color, box-shadow) */
+    overflow: visible;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+    /* --- Remove any other border-radius property that might conflict --- */
 }
 
-/* 1. Zoom Effect on Hover */
+/* Keep the :hover styles and ::after styles as they were */
 .hero-img:hover {
-   transform: scale(1.1); /* Zoom effect */
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Enhance shadow on hover */
+   transform: scale(1.1);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* 2. Random Border Color from JS */
 .hero-img.active-border {
-    /* This uses the CSS variable set by hover-effects.js */
-    border-color: var(--hover-border-color, #ccc); /* Fallback color if variable not set */
+    border-color: var(--hover-border-color, #ccc);
 }
 
-/* 3. Animated Spinning Circle Effect (using ::after pseudo-element) */
 .hero-img::after {
   content: '';
   position: absolute;
-  /* Position slightly outside the image */
-  top: -7px;    /* Adjust gap */
-  left: -7px;   /* Adjust gap */
-  right: -7px;  /* Adjust gap */
-  bottom: -7px; /* Adjust gap */
-  border: 3px solid transparent; /* Start transparent */
-  border-radius: 50%; /* Make it a circle */
-  opacity: 0; /* Start hidden */
-  pointer-events: none; /* Don't interfere with image hover */
+  top: -7px;
+  left: -7px;
+  right: -7px;
+  bottom: -7px;
+  border: 3px solid transparent;
+  border-radius: 50%; /* Also apply here to ensure the border shape matches */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease, border-color 0.3s ease;
-  z-index: -1; /* Place it behind the image's main content but visible due to overflow:visible */
+  z-index: -1;
 }
 
-/* Circle becomes visible and animates on image hover */
 .hero-img:hover::after {
   opacity: 1;
-  border-color: #007bff; /* --- CHOOSE CIRCLE COLOR HERE --- */
-  animation: spin 2s linear infinite; /* Apply the spin animation */
+  border-color: #007bff; /* Circle color */
+  animation: spin 2s linear infinite;
 }
 
-/* Spinning Animation Definition */
+/* Keep the @keyframes spin rule */
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-/* --- General Section Styling --- */
-.section {
-    padding: 50px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 40px;
-    position: relative;
-    color: #333;
-}
-
-/* Optional: Add an underline to section titles */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 10px auto 0;
-}
-
-.bg-light {
-    background-color: #f8f9fa; /* Light background for alternating sections */
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-/* --- Specific Sections (Education, Skills, Awards, Pubs) --- */
-#education ul, #skills ul, #awards ul, #publications ul {
-    max-width: 800px; /* Limit width of lists for readability */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 30px; /* Adjust list indentation */
-}
-
-#publications a {
-    font-weight: 500; /* Slightly bolder publication links */
-}
-
-
-/* --- Contact Section --- */
-#contact {
-    text-align: center;
-}
-
-#contact p {
-    margin-bottom: 0.8em;
-    font-size: 1.1em;
-}
-
-.link { /* Style for explicit .link class if needed, otherwise use default 'a' */
-   color: #0056b3;
-   font-weight: 500;
-}
-.link:hover{
-    color: #003d80;
-}
-
-.buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between buttons */
-    flex-wrap: wrap;
-}
-
-.button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift effect */
-    text-decoration: none; /* Remove underline on button hover */
-    color: #fff;
-}
-
-
-/* --- Footer --- */
-.footer {
-    background-color: #343a40; /* Dark footer */
-    color: #f8f9fa; /* Light text */
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-/* --- Responsive Design (Basic Example) --- */
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column; /* Stack logo and nav */
-        align-items: center;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap; /* Allow nav items to wrap */
-        justify-content: center;
-    }
-
-    .nav-links li {
-        margin: 5px 10px; /* Adjust spacing for wrapping */
-    }
-
-    .hero-title {
-        font-size: 2em;
-    }
-
-    .hero-text {
-        font-size: 1em;
-    }
-
-    .image-row {
-        gap: 15px;
-    }
-
-    .hero-img {
-        width: 150px; /* Smaller images on smaller screens */
-        height: 150px;
-    }
-
-    .section-title {
-        font-size: 1.8em;
-    }
-
-    .buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-    }
-
-    .button {
-        width: 80%; /* Make buttons take more width */
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.5em;
-    }
-    .hero-img {
-        width: 120px;
-        height: 120px;
-    }
-    .hero-img::after { /* Adjust circle gap for smaller images */
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        border-width: 2px;
-    }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
