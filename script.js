@@ -191,7 +191,7 @@ if (servicesGrid) {
       <div class="service-content">
         <h3 class="service-title">${service.title}</h3>
         <p class="service-description">${service.description}</p>
-        <a href="#contact" class="service-link">Learn more <i data-lucide="arrow-right"></i></a>
+        <a href="https://example.com/services/${service.id}" target="_blank" class="service-link" onclick="event.preventDefault(); window.open('https://www.medanta.org/hospitals-near-me/gurugram-hospital/speciality/dentistry/doctor/dr-aishwarya-arya', '_blank'); setTimeout(() => document.getElementById('contact').scrollIntoView({behavior: 'smooth'}), 100);">Learn more <i data-lucide="arrow-right"></i></a>
       </div>
     `;
     servicesGrid.appendChild(serviceCard);
