@@ -24,37 +24,37 @@ const services = [
     id: 1,
     title: "Cosmetic Dentistry",
     description: "Transform your smile with our complete range of cosmetic procedures including veneers, whitening, and smile makeovers.",
-    image: "StocKPhotoDental/jonathan-borba-W9YEY6G8LVM-unsplash.jpg"
+    image: "jonathan-borba-W9YEY6G8LVM-unsplash.jpg"
   },
   {
     id: 2,
     title: "Preventative Care",
     description: "Regular cleanings, exams, and early intervention to maintain optimal oral health and prevent future problems.",
-    image: "StocKPhotoDental/diana-polekhina-fmB7IdFjhTM-unsplash.jpg"
+    image: "diana-polekhina-fmB7IdFjhTM-unsplash.jpg"
   },
   {
     id: 3,
     title: "Restorative Dentistry",
     description: "Repair damaged teeth with crowns, bridges, implants, and more to restore both function and appearance.",
-    image: "StocKPhotoDental/enis-yavuz-QT7ytJJwAnY-unsplash.jpg"
+    image: "enis-yavuz-QT7ytJJwAnY-unsplash.jpg"
   },
   {
     id: 4,
     title: "Orthodontics",
     description: "Straighten your teeth with modern clear aligners and traditional braces optimized for comfort and results.",
-    image: "StocKPhotoDental/kamal-hoseinianzade-RCQnbyQsnUg-unsplash.jpg"
+    image: "kamal-hoseinianzade-RCQnbyQsnUg-unsplash.jpg"
   },
   {
     id: 5,
     title: "Pediatric Dentistry",
     description: "Child-friendly dental care in a comfortable environment designed to create positive dental experiences.",
-    image: "StocKPhotoDental/jonathan-borba-v_2FRXEba94-unsplash.jpg"
+    image: "jonathan-borba-v_2FRXEba94-unsplash.jpg"
   },
   {
     id: 6,
     title: "Emergency Dentistry",
     description: "Prompt attention for dental emergencies including toothaches, broken teeth, and other urgent dental needs.",
-    image: "StocKPhotoDental/ozkan-guner-LO4HKJVyQjM-unsplash.jpg"
+    image: "ozkan-guner-LO4HKJVyQjM-unsplash.jpg"
   }
 ];
 
@@ -63,37 +63,37 @@ const portfolio = [
     id: 1,
     title: "Complete Smile Makeover",
     description: "Veneers, whitening, and contouring",
-    image: "StocKPhotoDental/atikah-akhtar-XJptUS8nbhs-unsplash.jpg"
+    image: "atikah-akhtar-XJptUS8nbhs-unsplash.jpg"
   },
   {
     id: 2,
     title: "Dental Implant Restoration",
     description: "Full-mouth rehabilitation with implants",
-    image: "StocKPhotoDental/caroline-lm-JiBssiZVPZA-unsplash.jpg"
+    image: "caroline-lm-JiBssiZVPZA-unsplash.jpg"
   },
   {
     id: 3,
     title: "Invisalign Transformation",
     description: "Clear aligner therapy for perfect alignment",
-    image: "StocKPhotoDental/caroline-lm-ux18C551ghI-unsplash.jpg"
+    image: "caroline-lm-ux18C551ghI-unsplash.jpg"
   },
   {
     id: 4,
     title: "Porcelain Crown Artistry",
     description: "Natural-looking crowns for damaged teeth",
-    image: "StocKPhotoDental/quang-tri-nguyen-VxVO1zrY5F8-unsplash.jpg"
+    image: "quang-tri-nguyen-VxVO1zrY5F8-unsplash.jpg"
   },
   {
     id: 5,
     title: "Composite Bonding",
     description: "Artistic repairs for chips and gaps",
-    image: "StocKPhotoDental/matthew-poetker-nWZs_SnBDmg-unsplash.jpg"
+    image: "matthew-poetker-nWZs_SnBDmg-unsplash.jpg"
   },
   {
     id: 6,
     title: "Professional Whitening",
     description: "Dramatic brightening in just one visit",
-    image: "StocKPhotoDental/bekky-bekks-sWudehHJXD4-unsplash.jpg"
+    image: "bekky-bekks-sWudehHJXD4-unsplash.jpg"
   }
 ];
 
