@@ -1,5 +1,22 @@
 // Lucide Icons initialization
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', function() {
+  lucide.createIcons();
+});
+
+// Make sure icons are created after any dynamic content is added
+function refreshIcons() {
+  lucide.createIcons();
+}
+
+// Header scroll effect
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
 // Data
 const services = [
@@ -7,37 +24,37 @@ const services = [
     id: 1,
     title: "Cosmetic Dentistry",
     description: "Transform your smile with our complete range of cosmetic procedures including veneers, whitening, and smile makeovers.",
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW9kZXJuIGRlbnRhbCB0cmVhdG1lbnRzfHx8fHx8MTcxMjc2OTk0OQ&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/jonathan-borba-W9YEY6G8LVM-unsplash.jpg"
   },
   {
     id: 2,
     title: "Preventative Care",
     description: "Regular cleanings, exams, and early intervention to maintain optimal oral health and prevent future problems.",
-    image: "https://images.unsplash.com/photo-1588776814546-daab30f310ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW9kZXJuIGRlbnRhbCB0cmVhdG1lbnRzfHx8fHx8MTcxMjc2OTk0OQ&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/diana-polekhina-fmB7IdFjhTM-unsplash.jpg"
   },
   {
     id: 3,
     title: "Restorative Dentistry",
     description: "Repair damaged teeth with crowns, bridges, implants, and more to restore both function and appearance.",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGVudGFsIGVxdWlwbWVudHx8fHx8fDE3MTI3Njk5NDk&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/enis-yavuz-QT7ytJJwAnY-unsplash.jpg"
   },
   {
     id: 4,
     title: "Orthodontics",
     description: "Straighten your teeth with modern clear aligners and traditional braces optimized for comfort and results.",
-    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW9kZXJuIGRlbnRhbCB0cmVhdG1lbnRzfHx8fHx8MTcxMjc2OTk0OQ&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/kamal-hoseinianzade-RCQnbyQsnUg-unsplash.jpg"
   },
   {
     id: 5,
     title: "Pediatric Dentistry",
     description: "Child-friendly dental care in a comfortable environment designed to create positive dental experiences.",
-    image: "https://images.unsplash.com/photo-1629909615184-74f495363b67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bW9kZXJuIGRlbnRhbCB0cmVhdG1lbnRzfHx8fHx8MTcxMjc2OTk1MA&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/jonathan-borba-v_2FRXEba94-unsplash.jpg"
   },
   {
     id: 6,
     title: "Emergency Dentistry",
     description: "Prompt attention for dental emergencies including toothaches, broken teeth, and other urgent dental needs.",
-    image: "https://images.unsplash.com/photo-1571772996211-2f02974a9f91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGVudGFsIGVxdWlwbWVudHx8fHx8fDE3MTI3Njk5NTA&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/ozkan-guner-LO4HKJVyQjM-unsplash.jpg"
   }
 ];
 
@@ -46,37 +63,37 @@ const portfolio = [
     id: 1,
     title: "Complete Smile Makeover",
     description: "Veneers, whitening, and contouring",
-    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c21pbGluZyBkZW50YWwgcGF0aWVudHN8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/atikah-akhtar-XJptUS8nbhs-unsplash.jpg"
   },
   {
     id: 2,
     title: "Dental Implant Restoration",
     description: "Full-mouth rehabilitation with implants",
-    image: "https://images.unsplash.com/photo-1622902046580-2337df4160e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c21pbGluZyBkZW50YWwgcGF0aWVudHN8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/caroline-lm-JiBssiZVPZA-unsplash.jpg"
   },
   {
     id: 3,
     title: "Invisalign Transformation",
     description: "Clear aligner therapy for perfect alignment",
-    image: "https://images.unsplash.com/photo-1643834636950-66518fd85551?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c21pbGluZyBkZW50YWwgcGF0aWVudHN8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/caroline-lm-ux18C551ghI-unsplash.jpg"
   },
   {
     id: 4,
     title: "Porcelain Crown Artistry",
     description: "Natural-looking crowns for damaged teeth",
-    image: "https://images.unsplash.com/photo-1599739291060-4578e77dac5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZmVzc2lvbmFsIGRlbnRhbCBvZmZpY2V8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/quang-tri-nguyen-VxVO1zrY5F8-unsplash.jpg"
   },
   {
     id: 5,
     title: "Composite Bonding",
     description: "Artistic repairs for chips and gaps",
-    image: "https://images.unsplash.com/photo-1609840112990-4265448268d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZmVzc2lvbmFsIGRlbnRhbCBvZmZpY2V8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/matthew-poetker-nWZs_SnBDmg-unsplash.jpg"
   },
   {
     id: 6,
     title: "Professional Whitening",
     description: "Dramatic brightening in just one visit",
-    image: "https://images.unsplash.com/photo-1606811956744-3e441b098038?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZmVzc2lvbmFsIGRlbnRhbCBvZmZpY2V8fHx8fHwxNzEyNzY5OTUw&ixlib=rb-4.0.3&q=80&w=1080"
+    image: "StocKPhotoDental/bekky-bekks-sWudehHJXD4-unsplash.jpg"
   }
 ];
 
@@ -196,7 +213,7 @@ if (servicesGrid) {
     `;
     servicesGrid.appendChild(serviceCard);
   });
-  lucide.createIcons(); // Reinitialize icons for dynamically added content
+  refreshIcons(); // Reinitialize icons for dynamically added content
 }
 
 // Render Portfolio Items
@@ -242,15 +259,22 @@ function updateSlidePosition() {
 }
 
 function updateActiveDot() {
-  const dots = document.querySelectorAll('.dot');
+  const dots = document.querySelectorAll('.slider-dot');
   dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
+    if (index === currentSlide) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
   });
 }
 
 // Render Testimonial Slides and Dots
 if (testimonialTrack && sliderDots) {
-  testimonials.forEach(testimonial => {
+  testimonials.forEach((testimonial, index) => {
+    // Create avatar placeholder
+    const avatarUrl = `https://i.pravatar.cc/150?img=${index + 10}`;
+    
     const slide = document.createElement('div');
     slide.className = 'testimonial-slide';
     
@@ -260,49 +284,58 @@ if (testimonialTrack && sliderDots) {
     
     slide.innerHTML = `
       <div class="testimonial-card">
-        <div class="testimonial-rating">${stars}</div>
         <p class="testimonial-quote">${testimonial.quote}</p>
         <div class="testimonial-author">
-          <div class="testimonial-name">${testimonial.name}</div>
-          <div class="testimonial-title">${testimonial.title}</div>
+          <img src="${avatarUrl}" alt="${testimonial.name}" class="testimonial-avatar">
+          <div class="testimonial-info">
+            <h4 class="testimonial-name">${testimonial.name}</h4>
+            <p class="testimonial-title">${testimonial.title}</p>
+            <div class="testimonial-rating">
+              ${Array(testimonial.rating).fill('<i data-lucide="star"></i>').join('')}
+            </div>
+          </div>
         </div>
       </div>
     `;
     testimonialTrack.appendChild(slide);
     
     // Create dot for this slide
-    const dot = document.createElement('div');
-    dot.className = 'dot';
-    if (testimonials.indexOf(testimonial) === 0) {
-      dot.classList.add('active');
-    }
-    
+    const dot = document.createElement('button');
+    dot.className = index === 0 ? 'slider-dot active' : 'slider-dot';
+    dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
     dot.addEventListener('click', () => {
-      currentSlide = testimonials.indexOf(testimonial);
+      currentSlide = index;
       updateSlidePosition();
+      updateActiveDot();
     });
     
     sliderDots.appendChild(dot);
   });
-  lucide.createIcons(); // Reinitialize icons for dynamically added content
-}
-
-// Slider Controls
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateSlidePosition();
-    }
-  });
+  lucide.createIcons();  // Initialize testimonial slider
+  updateSliderSize();
   
-  nextBtn.addEventListener('click', () => {
-    const maxSlides = Math.ceil(testimonials.length / (slideWidth === 33.333 ? 3 : slideWidth === 50 ? 2 : 1));
-    if (currentSlide < maxSlides - 1) {
-      currentSlide++;
-      updateSlidePosition();
-    }
-  });
+  // Add event listeners for slider controls
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlidePosition();
+        updateActiveDot();
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      const maxSlides = Math.ceil(testimonials.length / (slideWidth === 33.333 ? 3 : slideWidth === 50 ? 2 : 1));
+      if (currentSlide < maxSlides - 1) {
+        currentSlide++;
+        updateSlidePosition();
+        updateActiveDot();
+      }
+    });
+  }
+  
+  // Refresh all icons after dynamic content is loaded
+  refreshIcons();
 }
 
 // Render Hosting Options
